@@ -1,11 +1,10 @@
-const http = require('http');
+'use strict'
 
-const server = http.createServer((request, response) => {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World! qwertyui");
-});
+const path = require('path')
+const express = require('express')
+const app = express()
+const mainRouter = require('./mainRoutes.js')
 
-const port = process.env.PORT || 1337;
-server.listen(port);
-
-console.log("Server running at http://localhost:%d", port);
+app.use(mainRouter)
+app.listen(3000)
+console.log('Express server running on port 3000')
