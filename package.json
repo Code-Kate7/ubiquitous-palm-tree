@@ -6,6 +6,10 @@
     "start": "node index",
     "test": "jest"
   },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["html"]
+  },
   "author": "",
   "license": "ISC",
   "description": "",
